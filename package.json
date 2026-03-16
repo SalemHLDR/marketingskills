@@ -1,0 +1,29 @@
+{
+  "name": "skills",
+  "version": "1.0.0",
+  "description": "CLI for installing Agent Skills from GitHub repositories",
+  "bin": {
+    "skills": "./bin/skills.js"
+  },
+  "scripts": {
+    "test": "node --check bin/skills.js && echo 'Syntax OK'"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "claude",
+    "marketing",
+    "llm"
+  ],
+  "author": "Corey Haines",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coreyhaines31/marketingskills.git"
+  },
+  "homepage": "https://github.com/coreyhaines31/marketingskills#readme"
+}
