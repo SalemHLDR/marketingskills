@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liberty Debt Relief – Get Out of Debt in 24–48 Months</title>
+  <meta name="description" content="Liberty Debt Relief helps you settle unsecured debt for less than you owe. No upfront fees. A-rated BBB. Over 31,000 clients helped. Free consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0b1f3a;
+      --navy2:  #122845;
+      --blue:   #1a5cad;
+      --blue2:  #2272d4;
+      --gold:   #e8a020;
+      --gold2:  #f5b942;
+      --green:  #1bab6b;
+      --light:  #f4f7fb;
+      --white:  #ffffff;
+      --gray:   #64748b;
+      --dark:   #1e293b;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(11,31,58,.10);
+      --shadow2: 0 8px 40px rgba(11,31,58,.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      box-shadow: 0 2px 20px rgba(0,0,0,.25);
+    }
+
+    .nav-logo {
+      font-size: 1.35rem; font-weight: 800; color: var(--white);
+      text-decoration: none; letter-spacing: -.3px;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.8); text-decoration: none;
+      font-size: .9rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold); color: var(--navy);
+      padding: .55rem 1.3rem; border-radius: 8px;
+      font-weight: 700; font-size: .9rem;
+      text-decoration: none; transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--gold2); transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #193a68 100%);
+      min-height: 92vh;
+      display: flex; align-items: center;
+      padding: 5rem 5% 4rem;
+      position: relative; overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(26,92,173,.22) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(232,160,32,.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* subtle grid overlay */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(232,160,32,.15); border: 1px solid rgba(232,160,32,.35);
+      color: var(--gold2); border-radius: 100px;
+      padding: .35rem .9rem; font-size: .8rem; font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.08; letter-spacing: -.04em;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 .accent { color: var(--gold); }
+
+    .hero-sub {
+      font-size: 1.1rem; color: rgba(255,255,255,.72);
+      max-width: 500px; margin-bottom: 2rem; line-height: 1.7;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      padding: .9rem 2rem; border-radius: var(--radius);
+      font-weight: 800; font-size: 1rem;
+      text-decoration: none; border: none; cursor: pointer;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(232,160,32,.4);
+    }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,160,32,.5); }
+
+    .btn-ghost {
+      background: transparent; color: var(--white);
+      padding: .9rem 1.8rem; border-radius: var(--radius);
+      font-weight: 600; font-size: 1rem;
+      text-decoration: none; border: 2px solid rgba(255,255,255,.3);
+      transition: border-color .2s, background .2s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.07); }
+
+    .hero-trust {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex; align-items: center; gap: .5rem;
+      color: rgba(255,255,255,.65); font-size: .82rem; font-weight: 500;
+    }
+    .hero-trust-item .icon { color: var(--green); font-size: 1rem; }
+
+    /* Hero card / form */
+    .hero-card {
+      background: var(--white); border-radius: 20px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    }
+    .hero-card h3 {
+      font-size: 1.2rem; font-weight: 800; color: var(--navy);
+      margin-bottom: .35rem;
+    }
+    .hero-card p { font-size: .88rem; color: var(--gray); margin-bottom: 1.5rem; }
+
+    .form-row { display: flex; flex-direction: column; gap: .85rem; }
+    .form-group label {
+      display: block; font-size: .8rem; font-weight: 600;
+      color: var(--dark); margin-bottom: .3rem;
+    }
+    .form-group input, .form-group select {
+      width: 100%; padding: .75rem 1rem;
+      border: 1.5px solid #d1dbe8; border-radius: 8px;
+      font-size: .95rem; color: var(--dark);
+      outline: none; transition: border-color .2s;
+      font-family: inherit;
+      appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--blue); }
+
+    .form-submit {
+      background: var(--blue); color: var(--white);
+      border: none; border-radius: 10px;
+      padding: .95rem 1.5rem; width: 100%;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      font-family: inherit;
+      transition: background .2s, transform .15s;
+      margin-top: .25rem;
+    }
+    .form-submit:hover { background: var(--blue2); transform: translateY(-1px); }
+
+    .form-disclaimer {
+      font-size: .72rem; color: var(--gray);
+      text-align: center; margin-top: .75rem; line-height: 1.5;
+    }
+
+    /* ── STATS BAND ── */
+    .stats-band {
+      background: var(--light);
+      border-top: 1px solid #e2eaf3;
+      border-bottom: 1px solid #e2eaf3;
+      padding: 2.5rem 5%;
+    }
+    .stats-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; text-align: center;
+    }
+    .stat-item {}
+    .stat-number {
+      font-size: 2.4rem; font-weight: 900; color: var(--navy);
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .stat-label { font-size: .85rem; color: var(--gray); margin-top: .35rem; font-weight: 500; }
+    .stat-number .stat-accent { color: var(--blue); }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 5rem 5%; }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(26,92,173,.1); color: var(--blue);
+      border-radius: 100px; padding: .3rem .9rem;
+      font-size: .78rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; margin-bottom: .75rem;
+    }
+    h2.section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900;
+      color: var(--navy); line-height: 1.15; letter-spacing: -.03em;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1.05rem; color: var(--gray); max-width: 560px;
+      line-height: 1.7; margin-bottom: 3rem;
+    }
+    .section-sub.centered { margin-left: auto; margin-right: auto; text-align: center; }
+
+    .centered { text-align: center; }
+    .centered h2, .centered .section-tag { margin-left: auto; margin-right: auto; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--white); }
+
+    .steps {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; position: relative;
+    }
+
+    .step {
+      background: var(--light); border-radius: 16px;
+      padding: 2rem 1.5rem; position: relative;
+      border: 1.5px solid #e2eaf3;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .step:hover { box-shadow: var(--shadow2); transform: translateY(-4px); }
+
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--gold);
+      font-weight: 900; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+    .step h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .6rem; }
+    .step p { font-size: .88rem; color: var(--gray); line-height: 1.65; }
+
+    .connector {
+      position: absolute; top: 50%; left: 100%;
+      width: 1.5rem; height: 2px;
+      background: linear-gradient(90deg, #d1dbe8, transparent);
+      transform: translateY(-50%);
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--light); }
+
+    .services-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white); border-radius: 16px;
+      padding: 2rem; border: 1.5px solid #e2eaf3;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .service-card:hover { box-shadow: var(--shadow2); transform: translateY(-4px); }
+
+    .service-icon {
+      width: 54px; height: 54px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; margin-bottom: 1.1rem;
+    }
+    .icon-blue { background: rgba(26,92,173,.1); }
+    .icon-green { background: rgba(27,171,107,.1); }
+    .icon-gold { background: rgba(232,160,32,.1); }
+
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: .6rem; }
+    .service-card p { font-size: .88rem; color: var(--gray); line-height: 1.65; }
+
+    .service-tag {
+      display: inline-block; margin-top: 1rem;
+      background: rgba(26,92,173,.08); color: var(--blue);
+      border-radius: 100px; padding: .2rem .75rem;
+      font-size: .75rem; font-weight: 600;
+    }
+
+    /* ── WHY CHOOSE ── */
+    .why { background: var(--white); }
+
+    .why-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+
+    .why-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: 20px; padding: 2.5rem;
+      color: var(--white);
+    }
+    .why-visual h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; }
+
+    .debt-compare { display: flex; flex-direction: column; gap: 1.2rem; }
+    .compare-row { display: flex; flex-direction: column; gap: .4rem; }
+    .compare-label { font-size: .78rem; color: rgba(255,255,255,.6); font-weight: 500; }
+    .bar-wrap { height: 36px; border-radius: 8px; overflow: hidden; background: rgba(255,255,255,.08); position: relative; }
+    .bar-fill {
+      height: 100%; border-radius: 8px;
+      display: flex; align-items: center; padding: 0 .8rem;
+      font-size: .82rem; font-weight: 700;
+      position: relative;
+    }
+    .bar-before { background: linear-gradient(90deg, #e54545, #c0392b); color: var(--white); width: 100%; }
+    .bar-after { background: linear-gradient(90deg, var(--green), #13d482); color: var(--dark); width: 55%; }
+    .bar-savings {
+      margin-top: .3rem;
+      display: flex; align-items: center; gap: .4rem;
+      font-size: .78rem; color: var(--gold2); font-weight: 600;
+    }
+
+    .why-points { display: flex; flex-direction: column; gap: 1.25rem; }
+    .why-point { display: flex; gap: 1rem; align-items: flex-start; }
+    .why-point-icon {
+      width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+      background: rgba(26,92,173,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .why-point-text h4 { font-size: .98rem; font-weight: 700; color: var(--navy); margin-bottom: .25rem; }
+    .why-point-text p { font-size: .85rem; color: var(--gray); line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--navy); padding: 5rem 5%; }
+
+    .testimonials .section-tag { background: rgba(232,160,32,.15); color: var(--gold2); }
+    .testimonials .section-title { color: var(--white); }
+    .testimonials .section-sub { color: rgba(255,255,255,.6); }
+
+    .reviews-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,.06); border-radius: 16px;
+      padding: 1.75rem; border: 1px solid rgba(255,255,255,.1);
+      transition: background .2s;
+    }
+    .review-card:hover { background: rgba(255,255,255,.09); }
+
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: .9rem; letter-spacing: .1em; }
+    .review-text { font-size: .9rem; color: rgba(255,255,255,.82); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: .75rem; }
+    .reviewer-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--gold) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--white);
+      flex-shrink: 0;
+    }
+    .reviewer-name { font-size: .88rem; font-weight: 700; color: var(--white); }
+    .reviewer-meta { font-size: .75rem; color: rgba(255,255,255,.5); }
+    .review-platform {
+      font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.35);
+      margin-top: .2rem; text-transform: uppercase; letter-spacing: .05em;
+    }
+
+    /* ── ACCREDITATION ── */
+    .accreditation {
+      background: var(--light); padding: 3rem 5%;
+      border-top: 1px solid #e2eaf3; border-bottom: 1px solid #e2eaf3;
+    }
+    .accred-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .accred-label { font-size: .9rem; font-weight: 700; color: var(--navy); }
+    .accred-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+    .accred-badge {
+      background: var(--white); border: 1.5px solid #d1dbe8;
+      border-radius: 10px; padding: .6rem 1.2rem;
+      font-size: .82rem; font-weight: 700; color: var(--navy);
+      display: flex; align-items: center; gap: .5rem;
+    }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
+
+    .faq-item {
+      border-bottom: 1px solid #e2eaf3; padding: 1.4rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; font-weight: 700; color: var(--navy);
+      font-size: .98rem; gap: 1rem;
+    }
+    .faq-q .toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--light); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--blue); font-weight: 700;
+      transition: background .2s;
+    }
+    .faq-item.open .faq-q .toggle { background: var(--blue); color: var(--white); }
+    .faq-a {
+      display: none; font-size: .9rem; color: var(--gray);
+      line-height: 1.75; padding-top: .75rem;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA BOTTOM ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+      padding: 5rem 5%; text-align: center;
+    }
+    .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.05rem; color: rgba(255,255,255,.75); margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-white {
+      background: var(--white); color: var(--navy);
+      padding: .9rem 2rem; border-radius: var(--radius);
+      font-weight: 800; font-size: 1rem; text-decoration: none;
+      transition: background .2s, transform .15s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-white:hover { background: var(--light); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.55);
+      padding: 3rem 5% 2rem;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 2.5rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.2rem; display: inline-block; margin-bottom: .75rem; }
+    .footer-brand p { font-size: .83rem; line-height: 1.7; max-width: 260px; }
+
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: var(--white); margin-bottom: .9rem; }
+    .footer-col a { display: block; font-size: .83rem; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: .45rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-disclaimer { font-size: .72rem; line-height: 1.7; max-width: 700px; }
+    .footer-copy { font-size: .78rem; white-space: nowrap; }
+
+    /* ── PHONE CTA STRIP ── */
+    .phone-strip {
+      background: var(--gold); text-align: center; padding: .7rem 5%;
+      font-size: .88rem; font-weight: 700; color: var(--navy);
+    }
+    .phone-strip a { color: var(--navy); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; max-width: 600px; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .why-inner { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .steps { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    /* ── ANIMATION ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content > * {
+      animation: fadeUp .6s ease both;
+    }
+    .hero-badge { animation-delay: .05s; }
+    .hero h1 { animation-delay: .12s; }
+    .hero-sub { animation-delay: .2s; }
+    .hero-actions { animation-delay: .28s; }
+    .hero-trust { animation-delay: .36s; }
+    .hero-card { animation: fadeUp .7s .2s ease both; }
+
+    /* phone number style */
+    .phone-num { font-size: 1.3rem; font-weight: 900; letter-spacing: -.02em; }
+  </style>
+</head>
+<body>
+
+<!-- Phone strip -->
+<div class="phone-strip">
+  Free Consultation: <a href="tel:18005551234"><span class="phone-num">1-800-555-1234</span></a> &nbsp;|&nbsp; Mon–Fri 8am–8pm PST &nbsp;|&nbsp; <strong>No upfront fees. Ever.</strong>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#" class="nav-logo">Liberty<span>Debt</span>Relief</a>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#free-consult" class="nav-cta">Free Consultation →</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        ⭐ A-Rated BBB &nbsp;·&nbsp; AFCC Accredited &nbsp;·&nbsp; 31,000+ Clients Helped
+      </div>
+      <h1>
+        Escape Debt.<br />
+        <span class="accent">Keep More</span><br />
+        of Your Money.
+      </h1>
+      <p class="hero-sub">
+        We negotiate with your creditors to settle unsecured debt for <strong>less than you owe</strong> — often cutting balances by 50% or more. No upfront fees. Results in 24–48 months.
+      </p>
+      <div class="hero-actions">
+        <a href="#free-consult" class="btn-primary">
+          ✦ Get My Free Debt Analysis
+        </a>
+        <a href="#how" class="btn-ghost">
+          See How It Works ↓
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span class="icon">✔</span> Zero upfront fees</div>
+        <div class="hero-trust-item"><span class="icon">✔</span> No credit card required</div>
+        <div class="hero-trust-item"><span class="icon">✔</span> Confidential consultation</div>
+        <div class="hero-trust-item"><span class="icon">✔</span> Results-based program</div>
+      </div>
+    </div>
+
+    <!-- Lead form -->
+    <div class="hero-card" id="free-consult">
+      <h3>See How Much You Could Save</h3>
+      <p>Free, no-obligation debt analysis. Takes 2 minutes.</p>
+      <form class="form-row" onsubmit="return false;">
+        <div class="form-group">
+          <label>Total Unsecured Debt Amount</label>
+          <select>
+            <option value="">Select your debt range…</option>
+            <option>$10,000 – $15,000</option>
+            <option>$15,000 – $25,000</option>
+            <option>$25,000 – $50,000</option>
+            <option>$50,000 – $100,000</option>
+            <option>Over $100,000</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your First Name</label>
+          <input type="text" placeholder="First name" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@email.com" />
+        </div>
+        <button class="form-submit" type="submit">
+          Get My Free Savings Estimate →
+        </button>
+      </form>
+      <p class="form-disclaimer">
+        By submitting, you consent to be contacted by Liberty Debt Relief. Your information is 100% confidential and never sold.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Band -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">31<span class="stat-accent">K+</span></div>
+      <div class="stat-label">Clients Helped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">$1<span class="stat-accent">B+</span></div>
+      <div class="stat-label">Debt Resolved</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4.8<span class="stat-accent">★</span></div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">13<span class="stat-accent">+</span></div>
+      <div class="stat-label">Years in Business</div>
+    </div>
+  </div>
+</div>
+
+<!-- How It Works -->
+<section class="how" id="how">
+  <div style="max-width:1100px; margin: 0 auto;">
+    <div class="centered">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">Four steps to financial freedom</h2>
+      <p class="section-sub centered">Our proven process gets you out of debt faster and for less than you owe — without bankruptcy.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Free Consultation</h3>
+        <p>Talk to a certified debt specialist who reviews your situation at no cost. No pressure, no obligations — just clarity on your options.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Enroll Your Debt</h3>
+        <p>You stop making payments to creditors and instead make one low monthly deposit into a dedicated account that you control.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Negotiate</h3>
+        <p>Our expert negotiators work directly with your creditors to settle your balances for significantly less than you owe.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Debt Resolved</h3>
+        <p>Once you approve a settlement, we pay your creditor and collect our fee only after you save money. You become debt-free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div style="max-width:1100px; margin: 0 auto;">
+    <div class="centered">
+      <span class="section-tag">Our Services</span>
+      <h2 class="section-title">Tailored solutions for your debt</h2>
+      <p class="section-sub centered">We handle multiple types of unsecured debt. Find the program that fits your situation.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon icon-blue">💳</div>
+        <h3>Credit Card Debt Settlement</h3>
+        <p>We negotiate directly with credit card issuers — Visa, Mastercard, Amex, and more — to reduce what you owe, often by 40–60%.</p>
+        <span class="service-tag">Most popular</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon icon-green">🎓</div>
+        <h3>Private Student Loan Relief</h3>
+        <p>Struggling with private student loans? Unlike federal loans, these can often be settled. Our team can negotiate with private lenders on your behalf.</p>
+        <span class="service-tag">Private loans only</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon icon-gold">📋</div>
+        <h3>Debt Consolidation Program</h3>
+        <p>Roll multiple debts into one simplified monthly payment. Lower your interest rate and get a clear, predictable path to being debt-free.</p>
+        <span class="service-tag">Single monthly payment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why">
+  <div class="why-inner">
+    <div class="why-visual">
+      <h3>See the difference our program makes</h3>
+      <div class="debt-compare">
+        <div class="compare-row">
+          <div class="compare-label">Example: $30,000 enrolled debt</div>
+          <div class="bar-wrap">
+            <div class="bar-fill bar-before">What you owe: $30,000</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-label">After Liberty Debt Relief negotiation</div>
+          <div class="bar-wrap">
+            <div class="bar-fill bar-after">You pay: ~$16,500</div>
+          </div>
+          <div class="bar-savings">↑ Potential savings: $13,500 (45% reduction)</div>
+        </div>
+      </div>
+      <p style="font-size:.75rem; color:rgba(255,255,255,.4); margin-top:1.5rem; line-height:1.6;">
+        Example for illustration only. Individual results vary based on enrolled debt, creditor, and program performance. Program fees apply and offset savings.
+      </p>
+    </div>
+
+    <div>
+      <span class="section-tag">Why Liberty</span>
+      <h2 class="section-title" style="margin-bottom:1.75rem;">Trusted. Proven.<br />On your side.</h2>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="why-point-icon">🏛️</div>
+          <div class="why-point-text">
+            <h4>A-Rated by the BBB</h4>
+            <p>We maintain an A rating with the Better Business Bureau, reflecting our commitment to ethical, transparent practices.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🤝</div>
+          <div class="why-point-text">
+            <h4>Results-Based Fees Only</h4>
+            <p>We never charge upfront. Our fee is collected only after a successful settlement is approved by you.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🔒</div>
+          <div class="why-point-text">
+            <h4>AFCC Accredited</h4>
+            <p>We are a proud member of the American Fair Credit Council — the gold standard for ethical debt relief practices.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">📞</div>
+          <div class="why-point-text">
+            <h4>Dedicated Account Managers</h4>
+            <p>You'll have a real person guiding you through every step — never a chatbot or automated system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div style="max-width:1100px; margin: 0 auto;">
+    <div class="centered" style="margin-bottom:2.5rem;">
+      <span class="section-tag">Client Reviews</span>
+      <h2 class="section-title">Real results from real people</h2>
+      <p class="section-sub centered">Over 31,000 clients have trusted us. Here's what some of them had to say.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Liberty walked me through every step. I had two settlement offers accepted and I'm on track to be completely debt-free — three years sooner than if I'd kept paying minimums."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MR</div>
+          <div>
+            <div class="reviewer-name">Michael R.</div>
+            <div class="reviewer-meta">Settled $28,000 in credit card debt</div>
+            <div class="review-platform">BBB Verified Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I was skeptical at first, but the team was incredibly knowledgeable and never pressured me. They saved me over $12,000 and answered every question patiently."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SL</div>
+          <div>
+            <div class="reviewer-name">Sandra L.</div>
+            <div class="reviewer-meta">Settled $24,000 in 26 months</div>
+            <div class="review-platform">Consumer Affairs</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The process actually works. I enrolled $42k in debt and after 36 months my life is completely different. The staff kept me informed the whole time. Cannot recommend enough."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DJ</div>
+          <div>
+            <div class="reviewer-name">David J.</div>
+            <div class="reviewer-meta">Settled $42,000 in 36 months</div>
+            <div class="review-platform">Trustpilot</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="https://www.bbb.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5); font-size:.82rem; text-decoration:none;">
+        View all reviews on BBB →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Accreditation Bar -->
+<div class="accreditation">
+  <div class="accred-inner">
+    <div class="accred-label">Trusted &amp; Accredited By:</div>
+    <div class="accred-badges">
+      <div class="accred-badge">🏛️ BBB A-Rated</div>
+      <div class="accred-badge">✅ AFCC Member</div>
+      <div class="accred-badge">🎓 IAPDA Certified</div>
+      <div class="accred-badge">🔒 SSL Secured</div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="centered" style="margin-bottom:2.5rem;">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>What types of debt can Liberty Debt Relief help with?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          We help with unsecured debts such as credit cards, personal loans, medical bills, and private student loans. We cannot assist with secured debts (mortgages, auto loans), federal student loans, taxes, or utility bills.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Will debt settlement hurt my credit score?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          During the program, your credit score will likely decline because you stop making payments to creditors. However, once debts are settled, most clients see their credit recover over time. Many people find the long-term financial relief outweighs the temporary credit impact.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>How much does Liberty Debt Relief charge?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          We charge zero upfront fees. Our program fee — typically 15–25% of enrolled debt — is only collected after a settlement has been successfully negotiated and you have approved it. You only pay when we deliver results.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>How long does the program take?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          Most clients complete the program in 24–48 months, depending on the total enrolled debt and monthly deposit amount. Your dedicated account manager will give you a personalized timeline estimate during your free consultation.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>What is the minimum debt amount to enroll?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          We typically work with clients who have a minimum of $10,000 in qualifying unsecured debt. This ensures our negotiation efforts can deliver meaningful savings relative to any costs or credit impacts.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Are there any tax implications?</span>
+          <span class="toggle">+</span>
+        </div>
+        <div class="faq-a">
+          In some cases, forgiven debt over $600 may be reported to the IRS as income on a Form 1099-C. We recommend consulting a tax professional. However, many clients who are insolvent at the time of settlement may qualify for an IRS exclusion. We'll explain this fully during your consultation.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="cta-section">
+  <h2>Ready to take back control of your finances?</h2>
+  <p>Get a free, no-obligation debt analysis from a certified specialist. Find out exactly how much you could save.</p>
+  <div class="cta-actions">
+    <a href="#free-consult" class="btn-white">✦ Get My Free Analysis</a>
+    <a href="tel:18005551234" class="btn-ghost">📞 Call 1-800-555-1234</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Liberty<span>Debt</span>Relief</a>
+      <p>Helping Americans resolve unsecured debt since 2013. A-Rated BBB, AFCC accredited, IAPDA certified specialists.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#">Debt Settlement</a>
+      <a href="#">Debt Consolidation</a>
+      <a href="#">Private Student Loans</a>
+      <a href="#">Free Consultation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Client Reviews</a>
+      <a href="#">Accreditations</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">How Debt Settlement Works</a>
+      <a href="#">FAQ</a>
+      <a href="#">Blog</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-disclaimer">
+      Liberty Debt Relief is a debt settlement company, not a law firm or credit repair organization. Results vary based on individual circumstances. Debt settlement may negatively impact your credit. Settled debts may be taxable. We cannot guarantee that creditors will agree to settle or the amount of any settlement. Program fees range from 15–27% of enrolled debt. This is not legal or financial advice.
+    </div>
+    <div class="footer-copy">© 2026 Liberty Debt Relief. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Subtle scroll-reveal via IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.step, .service-card, .review-card, .why-point').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
