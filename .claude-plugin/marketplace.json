@@ -49,6 +49,173 @@
         "./skills/signup-flow-cro",
         "./skills/site-architecture",
         "./skills/social-content"
+      ],
+      "commands": [
+        {
+          "name": "ab-test-setup",
+          "description": "Plan, design, or implement an A/B test or experiment",
+          "skill": "./skills/ab-test-setup"
+        },
+        {
+          "name": "ad-creative",
+          "description": "Generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations",
+          "skill": "./skills/ad-creative"
+        },
+        {
+          "name": "ai-seo",
+          "description": "Optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers",
+          "skill": "./skills/ai-seo"
+        },
+        {
+          "name": "analytics-tracking",
+          "description": "Set up, improve, or audit analytics tracking and measurement",
+          "skill": "./skills/analytics-tracking"
+        },
+        {
+          "name": "churn-prevention",
+          "description": "Reduce churn, build cancellation flows, set up save offers, or recover failed payments",
+          "skill": "./skills/churn-prevention"
+        },
+        {
+          "name": "cold-email",
+          "description": "Write B2B cold emails and follow-up sequences that get replies",
+          "skill": "./skills/cold-email"
+        },
+        {
+          "name": "competitor-alternatives",
+          "description": "Create competitor comparison or alternative pages for SEO and sales enablement",
+          "skill": "./skills/competitor-alternatives"
+        },
+        {
+          "name": "content-strategy",
+          "description": "Plan a content strategy, decide what content to create, or figure out what topics to cover",
+          "skill": "./skills/content-strategy"
+        },
+        {
+          "name": "copy-editing",
+          "description": "Edit, review, or improve existing marketing copy",
+          "skill": "./skills/copy-editing"
+        },
+        {
+          "name": "copywriting",
+          "description": "Write, rewrite, or improve marketing copy for any page — homepage, landing pages, pricing, feature pages",
+          "skill": "./skills/copywriting"
+        },
+        {
+          "name": "email-sequence",
+          "description": "Create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program",
+          "skill": "./skills/email-sequence"
+        },
+        {
+          "name": "form-cro",
+          "description": "Optimize any form that is NOT signup/registration — lead capture forms, contact forms, and more",
+          "skill": "./skills/form-cro"
+        },
+        {
+          "name": "free-tool-strategy",
+          "description": "Plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness",
+          "skill": "./skills/free-tool-strategy"
+        },
+        {
+          "name": "launch-strategy",
+          "description": "Plan a product launch, feature announcement, or release strategy",
+          "skill": "./skills/launch-strategy"
+        },
+        {
+          "name": "lead-magnets",
+          "description": "Create, plan, or optimize a lead magnet for email capture or lead generation",
+          "skill": "./skills/lead-magnets"
+        },
+        {
+          "name": "marketing-ideas",
+          "description": "Get marketing ideas, inspiration, or strategies for your SaaS or software product",
+          "skill": "./skills/marketing-ideas"
+        },
+        {
+          "name": "marketing-psychology",
+          "description": "Apply psychological principles, mental models, or behavioral science to marketing",
+          "skill": "./skills/marketing-psychology"
+        },
+        {
+          "name": "onboarding-cro",
+          "description": "Optimize post-signup onboarding, user activation, first-run experience, or time-to-value",
+          "skill": "./skills/onboarding-cro"
+        },
+        {
+          "name": "page-cro",
+          "description": "Optimize, improve, or increase conversions on any marketing page — homepage, landing pages, pricing pages",
+          "skill": "./skills/page-cro"
+        },
+        {
+          "name": "paid-ads",
+          "description": "Run paid advertising campaigns on Google Ads, Meta, LinkedIn, Twitter/X, or TikTok",
+          "skill": "./skills/paid-ads"
+        },
+        {
+          "name": "paywall-upgrade-cro",
+          "description": "Create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates",
+          "skill": "./skills/paywall-upgrade-cro"
+        },
+        {
+          "name": "popup-cro",
+          "description": "Create or optimize popups, modals, overlays, slide-ins, or banners for conversion",
+          "skill": "./skills/popup-cro"
+        },
+        {
+          "name": "pricing-strategy",
+          "description": "Get help with pricing decisions, packaging, or monetization strategy",
+          "skill": "./skills/pricing-strategy"
+        },
+        {
+          "name": "product-marketing-context",
+          "description": "Create or update your product marketing context document used by all other skills",
+          "skill": "./skills/product-marketing-context"
+        },
+        {
+          "name": "programmatic-seo",
+          "description": "Create SEO-driven pages at scale using templates and data",
+          "skill": "./skills/programmatic-seo"
+        },
+        {
+          "name": "referral-program",
+          "description": "Create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy",
+          "skill": "./skills/referral-program"
+        },
+        {
+          "name": "revops",
+          "description": "Get help with revenue operations, lead lifecycle management, or marketing-to-sales handoff",
+          "skill": "./skills/revops"
+        },
+        {
+          "name": "sales-enablement",
+          "description": "Create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts",
+          "skill": "./skills/sales-enablement"
+        },
+        {
+          "name": "schema-markup",
+          "description": "Add, fix, or optimize schema markup and structured data on your site",
+          "skill": "./skills/schema-markup"
+        },
+        {
+          "name": "seo-audit",
+          "description": "Audit, review, or diagnose SEO issues on your site",
+          "skill": "./skills/seo-audit"
+        },
+        {
+          "name": "signup-flow-cro",
+          "description": "Optimize signup, registration, account creation, or trial activation flows",
+          "skill": "./skills/signup-flow-cro"
+        },
+        {
+          "name": "site-architecture",
+          "description": "Plan, map, or restructure your website's page hierarchy, navigation, URL structure, or internal linking",
+          "skill": "./skills/site-architecture"
+        },
+        {
+          "name": "social-content",
+          "description": "Create, schedule, or optimize social media content for LinkedIn, Twitter/X, Instagram, TikTok, and more",
+          "skill": "./skills/social-content"
+        }
       ]
     }
   ]
